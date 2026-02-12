@@ -24,12 +24,13 @@ class j6502 {
         uint8_t x = 0x00; // X Reg
         uint8_t y = 0x00; // Y Reg
         uint8_t stkp = 0x00; // Stack Pointer
-        uint8_t pc = 0x0000; // Prog Counter
+        uint16_t pc = 0x0000; // Prog Counter
         uint8_t status = 0x00; // Status Reg
 
     void reset(); // Forces Cpu Into Know State
     void irq(); // Instruction Execution At Specific Loc
     void nmi(); // Like irq(); But Cant Be Disabled
+    void clock();
 
     bool complete();
 
@@ -50,7 +51,7 @@ class j6502 {
 
 private:
     // Func To Access Status Reg
-    uint8_t getFlag(FLAGS6502 f);
+    uint8_t GetFlag(FLAGS6502 f);
     void SetFlag(FLAGS6502 f, bool v);
 
     uint8_t fetched = 0x00;

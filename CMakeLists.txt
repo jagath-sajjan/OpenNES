@@ -9,4 +9,6 @@ add_executable(OpenNES
         CPU/olcNes_Video1_6502.cpp
         CPU/j6502.cpp
         CPU/j6502.h
+        CPU/j6502Test.cpp
+        CPU/j6502Test.h
 )

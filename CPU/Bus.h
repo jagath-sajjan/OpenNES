@@ -1,6 +1,7 @@
 #pragma once
 #include <cstdint>
 #include <array>
+#include "j6502.h"
 
 class Bus {
     public:
